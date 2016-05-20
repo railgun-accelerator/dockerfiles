@@ -5,7 +5,7 @@ RUN pacman -S --noconfirm --needed base-devel git subversion; \
 groupadd -r makepkg; useradd -r -g makepkg makepkg; echo 'makepkg ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/makepkg;
 
 RUN git clone https://aur.archlinux.org/package-query.git; \
-cd package-tquery; \
+cd package-query; \
 chown -R makepkg .; \
 sudo -u makepkg makepkg -si --noconfirm; \
 cd ..; \
